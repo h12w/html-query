@@ -53,9 +53,9 @@ All functional definitions are defined in html-query/expr package.
 
 ...Checkers can be combined as boolean expressions:
 
-   And(Id("id1"), Class("c1"))
-   Or(Class("c1"), Class("c2"))
-   And(Class("c1"), Not(Class("c2")))
+    And(Id("id1"), Class("c1"))
+    Or(Class("c1"), Class("c2"))
+    And(Class("c1"), Not(Class("c2")))
 
 2. Checker builder
 ...A checker builder is a function that returns a checker. "Id", "Class", "And",
@@ -73,23 +73,23 @@ html-query package.
 2. Node finder
 ...Method Node.Find implements a BFS search for a node, e.g.
 
-   node.Find(Div, Class("id1"))
+    node.Find(Div, Class("id1"))
 
 ...But usually you can write the short form:
 
-   node.Div(Class("id1"))
+    node.Div(Class("id1"))
 
 3. Attribute getter
 ...Method Node.Attr can be used to get the value (or a regular expression
 ...submatch of the value) of a node, e.g.
 
-   node.Attr("Id")
-   node.Attr("href", "\(.*)")
+    node.Attr("Id")
+    node.Attr("href", "\(.*)")
 
 ...But usually you can write the short form:
 
-   node.Id()
-   node.Href("\(.*)")
+    node.Id()
+    node.Href("\(.*)")
 
 4. Node iterator
 ...Method Node.Children and Node.Descendants each returns a node iterator
