@@ -23,7 +23,7 @@ Examples
 2. Generator of html-query (under "gen" directory)
 
    A large part of html-query is automatically generated from HTML spec. The
-spec is in HTML format. So the generator parses it using html-query itself.
+spec is in HTML format, so the generator parses it using html-query itself.
 
 Design
 ======
