@@ -19,7 +19,7 @@ func (spec *Spec) GenerateExpr() {
 	c(err)
 	fp(f, "package expr")
 	fp(f, "import (")
-	fp(f, `"code.google.com/p/go.net/html/atom"`)
+	fp(f, `"golang.org/x/net/html/atom"`)
 	fp(f, ")")
 
 	fp(f, "var (")
@@ -57,7 +57,7 @@ func (spec *Spec) GenerateChain() {
 	c(err)
 	fp(f, "package query")
 	fp(f, "import (")
-	fp(f, `. "github.com/hailiang/html-query/expr"`)
+	fp(f, `. "h12.me/html-query/expr"`)
 	fp(f, ")")
 
 	spec.generateChainSmall(f)

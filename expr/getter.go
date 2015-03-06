@@ -5,8 +5,9 @@
 package expr
 
 import (
-	"code.google.com/p/go.net/html"
 	"regexp"
+
+	"golang.org/x/net/html"
 )
 
 type StringGetter func(*html.Node) *string

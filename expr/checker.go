@@ -5,10 +5,11 @@
 package expr
 
 import (
-	"code.google.com/p/go.net/html"
-	"code.google.com/p/go.net/html/atom"
 	"regexp"
 	"strings"
+
+	"golang.org/x/net/html"
+	"golang.org/x/net/html/atom"
 )
 
 type Checker func(*html.Node) *html.Node
@@ -107,7 +108,7 @@ var (
 	DoctypeNode  = TypeChecker(html.DoctypeNode)
 )
 
-func NonemptyTextNode (n *html.Node) *html.Node {
+func NonemptyTextNode(n *html.Node) *html.Node {
 	if n == nil {
 		return nil
 	}

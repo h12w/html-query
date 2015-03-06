@@ -6,11 +6,12 @@ package query
 
 import (
 	"bytes"
-	"code.google.com/p/go.net/html"
-	. "github.com/hailiang/html-query/expr"
 	"io"
 	"regexp"
 	"strings"
+
+	"golang.org/x/net/html"
+	. "h12.me/html-query/expr"
 )
 
 // Node represents a HTML node.

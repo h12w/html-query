@@ -10,12 +10,13 @@ package query
 
 import (
 	"bufio"
-	"code.google.com/p/go.net/html"
 	"errors"
 	"fmt"
 	"io"
 	"os"
 	"strings"
+
+	"golang.org/x/net/html"
 )
 
 type writer interface {

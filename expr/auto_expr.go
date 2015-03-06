@@ -5,7 +5,7 @@
 package expr
 
 import (
-	"code.google.com/p/go.net/html/atom"
+	"golang.org/x/net/html/atom"
 )
 
 var (

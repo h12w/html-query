@@ -6,7 +6,8 @@ package expr
 
 import (
 	"container/list"
-	"code.google.com/p/go.net/html"
+
+	"golang.org/x/net/html"
 )
 
 // Broad first search in all descendants
@@ -82,4 +83,3 @@ func (q *Queue) Pop() *html.Node {
 	}
 	return q.l.Remove(q.l.Front()).(*html.Node)
 }
-

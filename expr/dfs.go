@@ -5,8 +5,9 @@
 package expr
 
 import (
-	"code.google.com/p/go.net/html"
 	"strconv"
+
+	"golang.org/x/net/html"
 )
 
 type Iter func() *html.Node
