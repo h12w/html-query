@@ -198,6 +198,9 @@ func (i NodeIter) Next() *Node {
 }
 
 func (i NodeIter) All() (nodes []*Node) {
+	if i.Iter == nil {
+		return
+	}
 	next := i.Iter
 	for node := next(); node != nil; node = next() {
 		nodes = append(nodes, NewNode(node))
