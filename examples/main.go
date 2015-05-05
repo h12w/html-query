@@ -6,10 +6,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/hailiang/html-query"
-	. "github.com/hailiang/html-query/expr"
 	"io"
 	"net/http"
+
+	"h12.me/html-query"
+	. "h12.me/html-query/expr"
 )
 
 func main() {

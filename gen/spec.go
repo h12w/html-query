@@ -5,13 +5,14 @@
 package main
 
 import (
-	"github.com/hailiang/html-query"
-	. "github.com/hailiang/html-query/expr"
 	"io"
 	"net/http"
 	"os"
 	"sort"
 	"strings"
+
+	"h12.me/html-query"
+	. "h12.me/html-query/expr"
 )
 
 const (

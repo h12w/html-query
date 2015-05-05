@@ -17,7 +17,7 @@ func (spec *Spec) GenerateExpr() {
 	file := "output/auto_expr.go"
 	f, err := os.Create(file)
 	c(err)
-	fp(f, "package expr")
+	fp(f, `package expr // import "h12.me/html-query/expr"`)
 	fp(f, "import (")
 	fp(f, `"golang.org/x/net/html/atom"`)
 	fp(f, ")")
