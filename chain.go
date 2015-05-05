@@ -7,7 +7,7 @@ package query
 import (
 	"regexp"
 
-	. "h12.me/html-query/expr"
+	. "github.com/hailiang/html-query/expr"
 )
 
 func (n *Node) Is(cs ...Checker) bool {

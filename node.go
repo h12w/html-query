@@ -10,8 +10,8 @@ import (
 	"regexp"
 	"strings"
 
+	. "github.com/hailiang/html-query/expr"
 	"golang.org/x/net/html"
-	. "h12.me/html-query/expr"
 )
 
 // Node represents a HTML node.

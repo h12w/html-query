@@ -57,7 +57,7 @@ func (spec *Spec) GenerateChain() {
 	c(err)
 	fp(f, "package query")
 	fp(f, "import (")
-	fp(f, `. "h12.me/html-query/expr"`)
+	fp(f, `. "github.com/hailiang/html-query/expr"`)
 	fp(f, ")")
 
 	spec.generateChainSmall(f)
