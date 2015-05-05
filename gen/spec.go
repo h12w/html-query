@@ -16,7 +16,7 @@ import (
 )
 
 const (
-	SpecUrl = `http://www.whatwg.org/specs/web-apps/current-work/multipage/section-index.html`
+	SpecUrl = `https://html.spec.whatwg.org/multipage/indices.html`
 
 //	SPEC_URL = `http://www.w3.org/html/wg/drafts/html/master/single-page.html`
 )

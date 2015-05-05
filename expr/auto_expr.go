@@ -1,9 +1,8 @@
-// Copyright 2014, Hǎiliàng Wáng. All rights reserved.
+// Copyright 2015, Hǎiliàng Wáng. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package expr
-
+package expr // import "h12.me/html-query/expr"
 import (
 	"golang.org/x/net/html/atom"
 )
@@ -173,7 +172,6 @@ var (
 	HttpEquiv       = AttrChecker("http-equiv")
 	Icon            = AttrChecker("icon")
 	Id              = AttrChecker("id")
-	Inert           = AttrChecker("inert")
 	Inputmode       = AttrChecker("inputmode")
 	Ismap           = AttrChecker("ismap")
 	Itemid          = AttrChecker("itemid")

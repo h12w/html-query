@@ -17,6 +17,10 @@ func (spec *Spec) GenerateExpr() {
 	file := "output/auto_expr.go"
 	f, err := os.Create(file)
 	c(err)
+	fp(f, `// Copyright 2015, Hǎiliàng Wáng. All rights reserved.`)
+	fp(f, `// Use of this source code is governed by a BSD-style`)
+	fp(f, `// license that can be found in the LICENSE file.`)
+	fp(f, ``)
 	fp(f, `package expr // import "h12.me/html-query/expr"`)
 	fp(f, "import (")
 	fp(f, `"golang.org/x/net/html/atom"`)
@@ -55,6 +59,10 @@ func (spec *Spec) GenerateChain() {
 	file := "output/auto_chain.go"
 	f, err := os.Create(file)
 	c(err)
+	fp(f, `// Copyright 2015, Hǎiliàng Wáng. All rights reserved.`)
+	fp(f, `// Use of this source code is governed by a BSD-style`)
+	fp(f, `// license that can be found in the LICENSE file.`)
+	fp(f, ``)
 	fp(f, "package query")
 	fp(f, "import (")
 	fp(f, `. "h12.me/html-query/expr"`)

@@ -1,4 +1,4 @@
-// Copyright 2014, Hǎiliàng Wáng. All rights reserved.
+// Copyright 2015, Hǎiliàng Wáng. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -650,10 +650,6 @@ func (n *Node) Icon(pat ...string) *string {
 
 func (n *Node) Id(pat ...string) *string {
 	return n.Attr("id", pat...)
-}
-
-func (n *Node) Inert(pat ...string) *string {
-	return n.Attr("inert", pat...)
 }
 
 func (n *Node) Inputmode(pat ...string) *string {
