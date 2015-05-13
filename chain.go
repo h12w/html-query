@@ -18,6 +18,10 @@ func (n *Node) Find(cs ...Checker) *Node {
 	return NewNode(Find(cs...)(&n.n))
 }
 
+func (n *Node) FindNext(cs ...Checker) *Node {
+	return NewNode(FindSibling(cs...)(&n.n))
+}
+
 func (n *Node) FindChild(cs ...Checker) *Node {
 	return NewNode(FindChild(cs...)(&n.n))
 }
