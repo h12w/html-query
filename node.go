@@ -81,17 +81,6 @@ func (n *Node) AllText(pat ...string) *string {
 	return nil
 }
 
-func (n *Node) PlainText() string {
-	if n == nil {
-		return ""
-	}
-	var buf bytes.Buffer
-	for _, s := range n.Descendants(TextNode).Strings(GetText) {
-		buf.WriteString(s)
-	}
-	return buf.String()
-}
-
 func (n *Node) Render() *string {
 	if n == nil {
 		return nil
