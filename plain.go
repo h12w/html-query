@@ -86,7 +86,7 @@ func renderPlainElementNode(w writer, n *html.Node) error {
 	renderPlainChild(w, n)
 	// write break after children are written
 	switch n.Data {
-	case "p", "br":
+	case "p", "br", "div":
 		writeBreak(w)
 	}
 	return nil
