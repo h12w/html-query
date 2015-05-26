@@ -15,10 +15,16 @@ func (n *Node) Is(cs ...Checker) bool {
 }
 
 func (n *Node) Find(cs ...Checker) *Node {
+	if n == nil {
+		return nil
+	}
 	return NewNode(Find(cs...)(&n.n))
 }
 
 func (n *Node) FindNext(cs ...Checker) *Node {
+	if n == nil {
+		return nil
+	}
 	return NewNode(FindSibling(cs...)(&n.n))
 }
 
