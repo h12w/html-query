@@ -66,6 +66,13 @@ func GetText(n *html.Node) *string {
 	return nil
 }
 
+func GetSrc(n *html.Node) *string {
+	if n == nil {
+		return nil
+	}
+	return GetAttr(n, "src")
+}
+
 func GetHref(n *html.Node) *string {
 	if n == nil {
 		return nil
