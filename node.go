@@ -74,7 +74,7 @@ func (n *Node) AllText(pat ...string) *string {
 			ss = append(ss, *text)
 		}
 	}
-	s := strings.Join(ss, " ")
+	s := html.UnescapeString(strings.Join(ss, " "))
 	if s != "" {
 		return &s
 	}

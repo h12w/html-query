@@ -73,6 +73,13 @@ func GetHref(n *html.Node) *string {
 	return GetAttr(n, "href")
 }
 
+func GetSrc(n *html.Node) *string {
+	if n == nil {
+		return nil
+	}
+	return GetAttr(n, "src")
+}
+
 func GetPat(pat []string) string {
 	if len(pat) > 1 {
 		panic("pat should be either ommited or only one string.")
