@@ -7,6 +7,7 @@ package main
 import (
 	"fmt"
 	"io"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -17,11 +18,11 @@ func (spec *Spec) GenerateExpr() {
 	file := "output/auto_expr.go"
 	f, err := os.Create(file)
 	c(err)
-	fp(f, `// Copyright 2015, Hǎiliàng Wáng. All rights reserved.`)
+	fp(f, `// Copyright 2017, Hǎiliàng Wáng. All rights reserved.`)
 	fp(f, `// Use of this source code is governed by a BSD-style`)
 	fp(f, `// license that can be found in the LICENSE file.`)
 	fp(f, ``)
-	fp(f, `package expr // import "h12.me/html-query/expr"`)
+	fp(f, `package expr`)
 	fp(f, "import (")
 	fp(f, `"golang.org/x/net/html/atom"`)
 	fp(f, ")")
@@ -59,7 +60,7 @@ func (spec *Spec) GenerateChain() {
 	file := "output/auto_chain.go"
 	f, err := os.Create(file)
 	c(err)
-	fp(f, `// Copyright 2015, Hǎiliàng Wáng. All rights reserved.`)
+	fp(f, `// Copyright 2017, Hǎiliàng Wáng. All rights reserved.`)
 	fp(f, `// Use of this source code is governed by a BSD-style`)
 	fp(f, `// license that can be found in the LICENSE file.`)
 	fp(f, ``)
@@ -171,15 +172,18 @@ func nodeAttribute(f io.Writer, attrName, attrId, nodeType string) {
 }
 
 func toid(s string) string {
-	return strings.Replace(strings.Title(s), "-", "", -1)
+	s = strings.Title(s)
+	s = strings.Replace(s, "-", "", -1)
+	s = strings.Replace(s, " ", "", -1)
+	return s
 }
 
 func format(file string) {
 	cmd := exec.Command("go", "fmt", file)
-	err := cmd.Start()
-	c(err)
-	err = cmd.Wait()
-	c(err)
+	c(cmd.Start())
+	if err := cmd.Wait(); err != nil {
+		log.Fatal("go fmt " + file + ": " + err.Error())
+	}
 }
 
 func fp(w io.Writer, v ...interface{}) {

@@ -10,7 +10,7 @@ import (
 	. "h12.me/html-query/expr"
 )
 
-func (n *Node) Is(cs ...Checker) bool {
+func (n *Node) Satisfy(cs ...Checker) bool {
 	return And(cs...)(n.InternalNode()) != nil
 }
 

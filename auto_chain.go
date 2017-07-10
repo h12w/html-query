@@ -1,4 +1,4 @@
-// Copyright 2015, Hǎiliàng Wáng. All rights reserved.
+// Copyright 2017, Hǎiliàng Wáng. All rights reserved.
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
@@ -226,10 +226,6 @@ func (n *Node) Ins(cs ...Checker) *Node {
 
 func (n *Node) Kbd(cs ...Checker) *Node {
 	return n.find(Kbd, cs)
-}
-
-func (n *Node) Keygen(cs ...Checker) *Node {
-	return n.find(Keygen, cs)
 }
 
 func (n *Node) Label(cs ...Checker) *Node {
@@ -468,8 +464,20 @@ func (n *Node) Allowfullscreen(pat ...string) *string {
 	return n.Attr("allowfullscreen", pat...)
 }
 
+func (n *Node) Allowpaymentrequest(pat ...string) *string {
+	return n.Attr("allowpaymentrequest", pat...)
+}
+
+func (n *Node) Allowusermedia(pat ...string) *string {
+	return n.Attr("allowusermedia", pat...)
+}
+
 func (n *Node) Alt(pat ...string) *string {
 	return n.Attr("alt", pat...)
+}
+
+func (n *Node) As(pat ...string) *string {
+	return n.Attr("as", pat...)
 }
 
 func (n *Node) Async(pat ...string) *string {
@@ -488,10 +496,6 @@ func (n *Node) Autoplay(pat ...string) *string {
 	return n.Attr("autoplay", pat...)
 }
 
-func (n *Node) Challenge(pat ...string) *string {
-	return n.Attr("challenge", pat...)
-}
-
 func (n *Node) Charset(pat ...string) *string {
 	return n.Attr("charset", pat...)
 }
@@ -508,6 +512,10 @@ func (n *Node) Class(pat ...string) *string {
 	return n.Attr("class", pat...)
 }
 
+func (n *Node) Color(pat ...string) *string {
+	return n.Attr("color", pat...)
+}
+
 func (n *Node) Cols(pat ...string) *string {
 	return n.Attr("cols", pat...)
 }
@@ -516,20 +524,12 @@ func (n *Node) Colspan(pat ...string) *string {
 	return n.Attr("colspan", pat...)
 }
 
-func (n *Node) Command(pat ...string) *string {
-	return n.Attr("command", pat...)
-}
-
 func (n *Node) Content(pat ...string) *string {
 	return n.Attr("content", pat...)
 }
 
 func (n *Node) Contenteditable(pat ...string) *string {
 	return n.Attr("contenteditable", pat...)
-}
-
-func (n *Node) Contextmenu(pat ...string) *string {
-	return n.Attr("contextmenu", pat...)
 }
 
 func (n *Node) Controls(pat ...string) *string {
@@ -578,10 +578,6 @@ func (n *Node) Download(pat ...string) *string {
 
 func (n *Node) Draggable(pat ...string) *string {
 	return n.Attr("draggable", pat...)
-}
-
-func (n *Node) Dropzone(pat ...string) *string {
-	return n.Attr("dropzone", pat...)
 }
 
 func (n *Node) Enctype(pat ...string) *string {
@@ -644,16 +640,20 @@ func (n *Node) HttpEquiv(pat ...string) *string {
 	return n.Attr("http-equiv", pat...)
 }
 
-func (n *Node) Icon(pat ...string) *string {
-	return n.Attr("icon", pat...)
-}
-
 func (n *Node) Id(pat ...string) *string {
 	return n.Attr("id", pat...)
 }
 
 func (n *Node) Inputmode(pat ...string) *string {
 	return n.Attr("inputmode", pat...)
+}
+
+func (n *Node) Integrity(pat ...string) *string {
+	return n.Attr("integrity", pat...)
+}
+
+func (n *Node) Is(pat ...string) *string {
+	return n.Attr("is", pat...)
 }
 
 func (n *Node) Ismap(pat ...string) *string {
@@ -678,10 +678,6 @@ func (n *Node) Itemscope(pat ...string) *string {
 
 func (n *Node) Itemtype(pat ...string) *string {
 	return n.Attr("itemtype", pat...)
-}
-
-func (n *Node) Keytype(pat ...string) *string {
-	return n.Attr("keytype", pat...)
 }
 
 func (n *Node) Kind(pat ...string) *string {
@@ -724,14 +720,6 @@ func (n *Node) Media(pat ...string) *string {
 	return n.Attr("media", pat...)
 }
 
-func (n *Node) Mediagroup(pat ...string) *string {
-	return n.Attr("mediagroup", pat...)
-}
-
-func (n *Node) Menu_(pat ...string) *string {
-	return n.Attr("menu", pat...)
-}
-
 func (n *Node) Method(pat ...string) *string {
 	return n.Attr("method", pat...)
 }
@@ -754,6 +742,14 @@ func (n *Node) Muted(pat ...string) *string {
 
 func (n *Node) Name(pat ...string) *string {
 	return n.Attr("name", pat...)
+}
+
+func (n *Node) Nomodule(pat ...string) *string {
+	return n.Attr("nomodule", pat...)
+}
+
+func (n *Node) Nonce(pat ...string) *string {
+	return n.Attr("nonce", pat...)
 }
 
 func (n *Node) Novalidate(pat ...string) *string {
@@ -780,6 +776,10 @@ func (n *Node) Placeholder(pat ...string) *string {
 	return n.Attr("placeholder", pat...)
 }
 
+func (n *Node) Playsinline(pat ...string) *string {
+	return n.Attr("playsinline", pat...)
+}
+
 func (n *Node) Poster(pat ...string) *string {
 	return n.Attr("poster", pat...)
 }
@@ -788,12 +788,12 @@ func (n *Node) Preload(pat ...string) *string {
 	return n.Attr("preload", pat...)
 }
 
-func (n *Node) Radiogroup(pat ...string) *string {
-	return n.Attr("radiogroup", pat...)
-}
-
 func (n *Node) Readonly(pat ...string) *string {
 	return n.Attr("readonly", pat...)
+}
+
+func (n *Node) Referrerpolicy(pat ...string) *string {
+	return n.Attr("referrerpolicy", pat...)
 }
 
 func (n *Node) Rel(pat ...string) *string {
@@ -824,14 +824,6 @@ func (n *Node) Scope(pat ...string) *string {
 	return n.Attr("scope", pat...)
 }
 
-func (n *Node) Scoped(pat ...string) *string {
-	return n.Attr("scoped", pat...)
-}
-
-func (n *Node) Seamless(pat ...string) *string {
-	return n.Attr("seamless", pat...)
-}
-
 func (n *Node) Selected(pat ...string) *string {
 	return n.Attr("selected", pat...)
 }
@@ -848,12 +840,8 @@ func (n *Node) Sizes(pat ...string) *string {
 	return n.Attr("sizes", pat...)
 }
 
-func (n *Node) Sortable(pat ...string) *string {
-	return n.Attr("sortable", pat...)
-}
-
-func (n *Node) Sorted(pat ...string) *string {
-	return n.Attr("sorted", pat...)
+func (n *Node) Slot_(pat ...string) *string {
+	return n.Attr("slot", pat...)
 }
 
 func (n *Node) Span_(pat ...string) *string {
@@ -916,6 +904,10 @@ func (n *Node) Typemustmatch(pat ...string) *string {
 	return n.Attr("typemustmatch", pat...)
 }
 
+func (n *Node) Updateviacache(pat ...string) *string {
+	return n.Attr("updateviacache", pat...)
+}
+
 func (n *Node) Usemap(pat ...string) *string {
 	return n.Attr("usemap", pat...)
 }
@@ -926,6 +918,10 @@ func (n *Node) Value(pat ...string) *string {
 
 func (n *Node) Width(pat ...string) *string {
 	return n.Attr("width", pat...)
+}
+
+func (n *Node) Workertype(pat ...string) *string {
+	return n.Attr("workertype", pat...)
 }
 
 func (n *Node) Wrap(pat ...string) *string {

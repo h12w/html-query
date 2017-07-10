@@ -22,11 +22,19 @@ const (
 )
 
 // skip the two because they does not appear in exp/html
-var ignoreList = map[string]bool{
-	"main":     true,
-	"menuitem": true,
-	"template": true,
-}
+var (
+	ignoredElements = map[string]bool{
+		"MathML":   true,
+		"SVG":      true,
+		"main":     true,
+		"menuitem": true,
+		"template": true,
+		"picture":  true,
+		"slot":     true,
+
+		"autonomous custom elements": true,
+	}
+)
 
 type Element struct {
 	Name       string
@@ -116,7 +124,7 @@ func parseAttributeTable(root *query.Node) *AttributeTable {
 				attr.IsGlobal = true
 			}
 		}
-		attr.Type = strings.Replace(td[2].PlainText(), "\n", "", -1)
+		attr.Type = strings.Replace(*td[2].PlainText(), "\n", "", -1)
 		// Attention: attribute may be duplicated, just choose the first one
 		// but set isglobal if one of it is global
 		if attrSet[name] == nil {
@@ -134,9 +142,9 @@ func parseElementTable(root *query.Node, attrTable *AttributeTable) *ElementTabl
 	for _, tr := range elementTable.Tbody().Children(Tr).All() {
 		td := tr.Children(Td).All()
 		for _, elemLink := range tr.Th().Descendants(Ahref).All() {
-			elem := &Element{Name: *elemLink.Text()}
+			elem := &Element{Name: strings.TrimSpace(*elemLink.Text())}
 			for _, attrLink := range td[4].Descendants(Ahref).All() {
-				attrName := *attrLink.Text()
+				attrName := strings.TrimSpace(*attrLink.Text())
 				if attr := attrSet[attrName]; attr != nil {
 					elem.Attributes = append(elem.Attributes, attr)
 				}
@@ -146,6 +154,6 @@ func parseElementTable(root *query.Node, attrTable *AttributeTable) *ElementTabl
 	}
 	return &ElementTable{
 		Set:  elemSet,
-		Skip: ignoreList,
+		Skip: ignoredElements,
 	}
 }
