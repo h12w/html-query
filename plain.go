@@ -69,7 +69,7 @@ func renderPlainElementNode(w writer, n *html.Node) error {
 		}
 		return nil
 	case "a":
-		if isURL(n.FirstChild.Data) {
+		if n.FirstChild != nil && isURL(n.FirstChild.Data) {
 			renderPlainChild(w, n)
 		} else if url := expr.GetAttr(n, "href"); url != nil && *url != "" {
 			w.WriteString("[")
