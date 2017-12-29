@@ -1,5 +1,6 @@
 html-query: A fluent and functional approach to querying HTML DOM
 =================================================================
+
 [![GoDoc](https://godoc.org/h12.me/html-query?status.svg)](https://godoc.org/h12.me/html-query)
 
 html-query is a Go package that provides a fluent and functional interface for
@@ -7,6 +8,7 @@ querying HTML DOM. It is based on [golang.org/x/net/html](https://godoc.org/gola
 
 Examples
 ========
+
 1. A simple example (under "examples" directory)
 ```
     r := get(`http://blog.golang.org/index`)
@@ -28,8 +30,11 @@ spec is in HTML format, so the generator parses it using html-query itself.
 
 Design
 ======
+
 Here is a simple explanation of the design of html-query.
-###Functional query expressions
+
+### Functional query expressions
+
 All functional definitions are defined in html-query/expr package.
 
 1. Checker and checker composition
@@ -60,7 +65,8 @@ All functional definitions are defined in html-query/expr package.
    builder builder (function that returns a checker builder) defined in
    html-query when needed.
 
-###Fluent interface
+### Fluent interface
+
 Fluent interface (http://en.wikipedia.org/wiki/Fluent_interface) are defined in
 html-query package.
 
