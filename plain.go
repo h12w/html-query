@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"golang.org/x/net/html"
-	"h12.me/html-query/expr"
+	"h12.io/html-query/expr"
 )
 
 func (n *Node) PlainText() *string {

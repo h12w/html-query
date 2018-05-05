@@ -66,7 +66,7 @@ func (spec *Spec) GenerateChain() {
 	fp(f, ``)
 	fp(f, "package query")
 	fp(f, "import (")
-	fp(f, `. "h12.me/html-query/expr"`)
+	fp(f, `. "h12.io/html-query/expr"`)
 	fp(f, ")")
 
 	spec.generateChainSmall(f)

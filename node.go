@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package query // import "h12.me/html-query"
+package query // import "h12.io/html-query"
 
 import (
 	"bytes"
@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"golang.org/x/net/html"
-	. "h12.me/html-query/expr"
+	. "h12.io/html-query/expr"
 )
 
 // Node represents a HTML node.

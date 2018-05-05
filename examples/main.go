@@ -9,8 +9,8 @@ import (
 	"io"
 	"net/http"
 
-	"h12.me/html-query"
-	. "h12.me/html-query/expr"
+	"h12.io/html-query"
+	. "h12.io/html-query/expr"
 )
 
 func main() {

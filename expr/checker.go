@@ -2,7 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
-package expr // import "h12.me/html-query/expr"
+package expr // import "h12.io/html-query/expr"
 
 import (
 	"regexp"

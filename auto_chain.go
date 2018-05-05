@@ -5,7 +5,7 @@
 package query
 
 import (
-	. "h12.me/html-query/expr"
+	. "h12.io/html-query/expr"
 )
 
 func (n *Node) A(cs ...Checker) *Node {

@@ -1,7 +1,7 @@
 html-query: A fluent and functional approach to querying HTML DOM
 =================================================================
 
-[![GoDoc](https://godoc.org/h12.me/html-query?status.svg)](https://godoc.org/h12.me/html-query)
+[![GoDoc](https://godoc.org/h12.io/html-query?status.svg)](https://godoc.org/h12.io/html-query)
 
 html-query is a Go package that provides a fluent and functional interface for
 querying HTML DOM. It is based on [golang.org/x/net/html](https://godoc.org/golang.org/x/net/html).
